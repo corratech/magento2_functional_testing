@@ -4,6 +4,7 @@ MAINTAINER Unai Lopez <unai.lopez@alfa9.com>
 
 # install OS packages
 RUN apt-get update && apt-get install -y \
+    wget \
     acl \
     apache2 \
     libapache2-mod-php \
