@@ -7,9 +7,10 @@ RUN apt-get update && apt-get install -y \
     acl \
     apache2 \
     libapache2-mod-php \
-    a2enmod rewrite \
-    service apache2 restart \
     && apt-get clean
+
+RUN a2enmod rewrite
+RUN service apache2 restart \
 
 # Install phantom JS
 RUN apt-get update && apt-get install -y \
