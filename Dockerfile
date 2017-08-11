@@ -18,13 +18,14 @@ RUN apt-get update && apt-get install -y \
     build-essential g++ flex bison gperf ruby perl \
     libsqlite3-dev libfontconfig1-dev libicu-dev libfreetype6 libssl-dev \
     libpng-dev libjpeg-dev python libx11-dev libxext-dev
-RUN cd ~ && wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.1.1-linux-x86_64.tar.bz2
+RUN cd ~
+RUn wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.1.1-linux-x86_64.tar.bz2
 RUN tar xvjf phantomjs-2.1.1-linux-x86_64.tar.bz2 
 RUN mv phantomjs-2.1.1-linux-x86_64 /usr/local/share
 RUN ln -sf /usr/local/share/phantomjs-2.1.1-linux-x86_64/bin/phantomjs /usr/local/bin
 
 # Install nodejs
-RUN 
-RUN cd ~ && https://nodejs.org/dist/v6.11.2/node-v6.11.2-linux-x64.tar.gz
+RUN cd ~ 
+RUN wget https://nodejs.org/dist/v6.11.2/node-v6.11.2-linux-x64.tar.gz
 RUN cd /usr/local && tar --strip-components 1 -xzf ~/node-v6.11.2-linux-x64.tar.gz
 RUN node -v
