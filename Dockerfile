@@ -25,8 +25,8 @@ RUN mv phantomjs-2.1.1-linux-x86_64 /usr/local/share
 RUN ln -sf /usr/local/share/phantomjs-2.1.1-linux-x86_64/bin/phantomjs /usr/local/bin
 
 # Install nodejs
-RUN cd ~ 
+RUN cd /tmp
 RUN wget https://nodejs.org/dist/v6.11.2/node-v6.11.2-linux-x64.tar.gz
 RUN cd /usr/local
-RUN tar --strip-components 1 -xzf ~/node-v6.11.2-linux-x64.tar.gz
+RUN tar --strip-components 1 -xzf /tmp/node-v6.11.2-linux-x64.tar.gz
 RUN node -v
